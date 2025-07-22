@@ -26,8 +26,6 @@ describe('Suite de testes relacionada a sauce demo', () => {
          //cy.get('.cart_item').should('be.visible').and('have.length', 1)
          //cy.get('.cart_item').should('have.length', 1) 
     })
-  
 
 
-    
 })
