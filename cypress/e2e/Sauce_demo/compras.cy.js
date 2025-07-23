@@ -16,10 +16,10 @@ describe('Testes relacionados a compras', () => {
         cy.get('.cart_item').should('be.visible').and('have.length', 4) //entrar no carrinho, validar itens que foram add
         cy.get('[data-test="checkout"]').click() // ira para checkout
         cy.get('[data-test="title"]').should('be.visible').contains('Checkout: Your Information') //Validar que foi para a página "Checkout Your Information"
-        cy.get('[data-test="firstName"]').type('Monique') // //Preencher campos de checkout Nome
-        cy.get('[data-test="lastName"]').type('Rodrigues') // //Preencher campos de checkout sobrenome
-        cy.get('[data-test="postalCode"]').type('29090490') // //Preencher campos de checkout cep
-        cy.get('[data-test="continue"]').click() // //Ir para overview
+        cy.get('[data-test="firstName"]').type('Monique') //Preencher campos de checkout Nome
+        cy.get('[data-test="lastName"]').type('Rodrigues') //Preencher campos de checkout sobrenome
+        cy.get('[data-test="postalCode"]').type('29090490') //Preencher campos de checkout cep
+        cy.get('[data-test="continue"]').click() //Ir para overview
         cy.get('[data-test="title"]').should('be.visible').contains('Checkout: Overview') //Validar que foi para a página "Checkout: Overview"                                
         cy.get('[data-test="finish"]').click() //Ir para finish                              
         cy.get('[data-test="title"]').should('be.visible').contains('Checkout: Complete!')//Validar que foi para a página "Checkout: Complete!"                                
