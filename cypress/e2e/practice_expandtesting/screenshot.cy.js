@@ -4,4 +4,11 @@ describe('Validar função screenshot', () => {
         cy.visit('https://practice.expandtesting.com/')
         cy.get('#home-header').screenshot('monique',{overwrite: true})
     })
+
+    it.only('Wait from page', () => { 
+        cy.visit('https://practice.expandtesting.com/')
+        cy.get('.gap-3 [href="/xpath-css-tester"]').click()
+        cy.wait(10000)
+        cy.get('h1').should('have.text', 'Xpath and Css Selector Tester Free Tools - Automation Testing Practice')
+    })
 })
