@@ -5,7 +5,7 @@ describe('Validar função screenshot', () => {
         cy.get('#home-header').screenshot('monique',{overwrite: true})
     })
 
-    it.only('Wait from page', () => { 
+    it('Wait from page', () => { 
         cy.visit('https://practice.expandtesting.com/')
         cy.get('.gap-3 [href="/xpath-css-tester"]').click()
         cy.wait(10000)
